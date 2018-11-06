@@ -52,3 +52,11 @@ class SampleActor
 }
 
 ```
+
+## Board
+```
+import { Board } from 'BluePill.Client.Lib'
+
+connectionString = '192.168.1.7:3000'
+DIContainer.Bind(SampleBoard).ToConst(new Board(connectionString))
+```
