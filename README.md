@@ -1,22 +1,54 @@
-# Hardware
+# BluePill
 
-- BluePill.Firmware
+## Overview
 
-# Hardware drivers
+```
++- BluePill board --------+
+|                         |
+|   (BluePill.Firmware)   |
+|                         |
++-----------------+-------+
+                  |
+     Serial conn. |
+     USB or UART  |
+                  |
++- Host ----------+-------+
+|                         |
+|   (BluePill.Daemon)     |
+|                         |
++-----------------+-------+
+                  |
+       Socket     |
+       connection |
+                  |
++- Client --------+-------+
+|                         |
+|  (BluePill.Client.Lib)  |
+|            |            |
+|            |            |
+|         User App        |
+|                         |
++-------------------------+
+```
 
-- BluePill.Driver
-- BluePill.Daemon
+## Hardware
 
-# Clients
+- [BluePill.Firmware](https://github.com/tBlabs/BluePill.Firmware) - firmware for board driving 
 
-- BluePill.Driver (yep, it's also http client)
-- BluePill.Client.Lib (in progress)
-- BluePill.Client.Cli (to do)
-- BluePill.Client.Http (very long future)
+# Drivers
+
+- [BluePill.Driver](https://github.com/tBlabs/BluePill.Driver) - REST + HTTP&CLI events, highly configurable standalone host
+- [BluePill.Daemon](https://github.com/tBlabs/BluePill.Daemon) - thin TCP host + board driver
+
+# Daemon Clients
+
+- [BluePill.Client.Lib](https://github.com/tBlabs/BluePill.Client.Lib) - base for other clients
+- BluePill.Client.Cli (TODO)
+- BluePill.Client.Http (TODO)
 
 # Managers
 
-- FlowManager
+- [FlowManager](https://github.com/tBlabs/EventsManager) - process manager for IoT devices
 
 ## Flow example 
 ```
